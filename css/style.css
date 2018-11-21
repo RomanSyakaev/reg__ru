@@ -711,6 +711,10 @@ body {
   }
 }
 
+.page-footer {
+  height: 50px;
+}
+
 
 @media (min-width: 1200px) {
   .desktop-container {
