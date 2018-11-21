@@ -23,20 +23,6 @@
 }
 
 
-body {                             
-  min-width: 320px;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #000000;
-  background: #202124 url("../img/background.jpg") no-repeat;
-  background-position: top;
-  background-size: cover;
-}
 
 img {
   max-width: 100%;
@@ -55,6 +41,25 @@ img {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+
+body {                             
+  min-width: 320px;
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.background-container {
+  width: auto;
+  height: 100%;
+  background: #202124 url("../img/background.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 .page-header {
@@ -76,11 +81,11 @@ img {
 }
 
 .main-nav__toggle {
+  display: block;
   position: absolute;
   bottom: 20px;
   right: 20px;
   z-index: 2;
-  display: block;
   width: 23px;
   height: 20px;
   background-color: #202124;
@@ -150,12 +155,11 @@ img {
 
 @media (min-width: 768px) {
   .main-nav {
-	width: 100%;
-    margin: 0px auto;
-	/* background-color: transparent; */
-	background-color: transparent;
-	border: none;
-	padding-bottom: 0;
+	  width: 100%;
+    margin: 0 auto;
+	  background-color: transparent;
+   	border: none;
+  	padding-bottom: 0px;
   }
   
   .main-nav__toggle {
@@ -176,12 +180,9 @@ img {
 }
 
 .site-list {
-  width: 300px;
   display: flex;
   flex-direction: column;
   width: auto;
-  font-weight: normal;
-  color: #ffffff;
 }
 
 .site-list a {
@@ -214,7 +215,7 @@ img {
 }
 
 .site-list__item--logo {
-  order: 5;
+  order: 7;
   position: relative;
   display: block;
 
@@ -223,7 +224,6 @@ img {
   padding-top: 27px;
   padding-bottom: 12px;
   background-color: #202124;
-  border: none;
 
   border-top: 1px solid #52565F;
   border-bottom-right-radius: 15px;
@@ -233,38 +233,66 @@ img {
 
 @media (min-width: 768px) {
   .site-list {
-	box-sizing: border-box; 
-	display: flex;
+	  box-sizing: border-box; 
+	  display: flex;
     flex-direction: row;
     justify-content: center;
-	max-width: 963px;
-	margin: 0 auto;
-	background-color: transparent;
+  	max-width: 963px;
+  	margin: 0 auto;
+  	background-color: transparent;
   }
   
   .site-list__item {
     order: 1;
-	width: auto;
+	  width: auto;
     margin: 0;
-	padding: 0 2.396%;
-	background-color: transparent;
-	flex: 0 1 auto;
+	  padding: 0;
+	  background-color: transparent;
+  	flex: 0 1 auto;
+  }
+  
+  .site-list__item:nth-child(1){
+	  width: 9.611%;
+  	text-indent: 2px;
+  }
+  
+  .site-list__item:nth-child(2){
+	  width: 10.02%;
+	  text-indent: 11px;
+  }
+  
+  .site-list__item:nth-child(3){
+	  width: 16.36%;
+	  text-indent: -11px;
+  }
+  
+  .site-list__item:nth-child(5){
+	  width: 12.883%;
+	  text-indent: 20px;
+  }
+  
+  .site-list__item:nth-child(6){
+  	width: 8.589%;
+  	text-indent: 20px
+  }
+  
+  .site-list__item:nth-child(7){
+	  width: 14.11%;
+	  text-indent: 15px
   }
   
   .site-list__item a {
-	margin: 0;
-
+	  margin: 0;
     font-size: 16px;
     line-height: 22px;
-	padding: 35px 0;
+  	padding: 35px 0;
     background-color: transparent;
     color: #ffffff;
     border: none;
-	flex-shrink: 2;
   }
 
-  .site-list__item:last-child a {
-    box-shadow: none;
+  .site-list__item--active a {
+    color: #9E4EC6;
   }
   
   .site-list__item a[href]:hover {
@@ -282,26 +310,14 @@ img {
   .site-list__item--logo {
     height: 56px;
     width: 139px;
-	padding: 32px 4.5%;
+	  padding: 32px 4.5%;
     margin: 0;
-    order: 1;
-	border: none;
-	flex-shrink: 0;
+  	border: none;
+  	flex-shrink: 0;
   }
 }
 
 
-@media (min-width: 900px) {
-  .site-list__item--logo {
-    height: 56px;
-    width: 139px;
-	padding: 32px 9.034%;
-    margin: 0;
-    order: 1;
-	border: none;
-	flex-shrink: 0;
-  }
-}
 
 @media (min-width: 1200px) {
   .site-list__item a {
@@ -367,6 +383,7 @@ img {
   font-weight: 700;
   font-size: 32px;
   line-height: 32px;
+  color: #202124;
 }
 
 .write-us__label {
